@@ -1,0 +1,589 @@
+/* Note: This CSS file is not by any stretch of the imagination organized according to industry standards.
+Partially because having more than one person working on the same thing have proven difficult to organize.
+And partially because we're all still learning. I suspect this will be pointed out on the feedback 
+and will be rectified during the next assignment. */
+
+
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||														||
+||	Det som følger her er standard formateringen	    ||
+||	til siden og skal brukes av alle.					||
+||	SKAL IKKE ENDRES PÅ!			 					||
+||														||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+/* Styrer standard formateringen av navnet og overskrifter - skal bruke denne classen. */
+.llamainc {
+	font-family: 'Wendy One', sans-serif;
+	color: #9C0707;
+	text-decoration: overline;
+}
+
+/* Styrer standard formateringen av navn og overskrifter som skal brukes i paragrafer (span) - skal bruke denne classen. */
+.llamaincp {
+	font-family: 'Oswald', sans-serif;
+	color: #9C0707;
+	text-decoration: overline;
+}
+
+/* Denne diven lager boksen som står midt på siden, det er inne i denne boksen alt content på siden skal ligge */
+.content-box {
+	overflow: hidden;
+	position: relative;
+    top: 40px;
+    background-color: #FFF8DD;
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 45px;
+    border: solid #1d1d1d 2px;
+    box-shadow: 0px 0px 10px 2px #1D1D1D;
+}
+
+/* Setter fonten i alle avsnitt til å være den samme */
+p {
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||														||
+||	Det som følger her er selve basisen til siden 		||
+||	Altså header, navbar og footer.						||
+||	SKAL IKKE ENDRES PÅ! Men kan legge til nye classer	||
+||														||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+/* setter bakgrundsbildet på siden, strekker den for å dekke hele siden og gjør slik at den ikke flytter seg når man scroller  */
+html {
+	background: 
+		url(image/backgroundllama2.jpg); 
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* Setter inn bannerfotoet, og styrer størrelsen og posisjonen på hele headeren */
+header {
+	overflow: hidden;
+	background: 
+	linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+	url(image/llamaheader.jpg);
+	background-size: cover;
+	min-width: 1200px;
+	max-width: 1200px;
+	max-height: 250px;
+	border: solid 2px;
+	margin: auto;
+	position: relative;
+    top: 41px;
+    box-shadow: 0px 0px 10px 2px #1D1D1D;
+}
+
+/* Setter inn logo bildet i headeren, reduserer størrelsen til 20% (så lenge man endrer width med prosent vil height automatisk endre seg) og setter posisjonen til bildet i forhold til headeren */
+.llamapic {
+	width: 20%;
+	position: relative;
+    left: 25px;
+    bottom: 5px;
+}	
+
+/* Denne styrer posisjonen og noe av formateringen av navnet i headeren. */
+header .llamainc {
+	position: relative;
+	bottom: 260px;
+    left: 260px;
+    font-size: 86px;
+	text-shadow: #000000 5px 3px;
+}
+/* Styrer posisjonen og formatering av "undergruppe teksten" i headeren */
+.tonne {
+    position: relative;
+    	top: -330px;
+    	left: -77px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 15px;
+    color: #a7a7a7;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Låser navbaren til toppen av siden og formaterer den */
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	background-color: #FFFBEB;
+	min-width: 1200px;
+	border: solid #CCBB77 2px;
+	z-index: 999;
+}
+
+/* Styrer positionen og noe av formateringen av navnet i navbaren  */
+nav .llamainc {
+	margin: 0;
+    position: relative;
+    left: 5px;
+    top: 12px;
+    float: left;
+    font-size: 20px;
+    text-shadow: #000000 1px 0px;
+}
+
+/* formaterer bildet i navbaren og footeren */
+.llamanav {
+	float: left;
+    width: 43px;
+}
+
+/* posisjonerer og formaterer knappene i navbaren */
+nav a {
+	position: relative;
+    right: 70px;
+	margin-right: -6px;
+	background: linear-gradient(to bottom left, #FEF1BC, #FAF2D0);
+	padding: 10px;
+	border:solid #F1E5B2 2px;
+	color: #880707;
+	font-size: 20px;
+	font-weight: bold;
+    display:inline-block;
+    width: 158px;
+    text-decoration: overline underline;
+}
+
+/* gjør slik at knappene i navbaren lyser når man holder musepekeren over dem */
+nav a:hover {
+	color: #D2B234;
+	background: linear-gradient(to bottom left, #FFFBEB, #FFFBEB);
+}
+
+/* Lager footer boksen */
+footer {
+	position: absolute;
+    left: 0;
+    right: 0;
+	text-align: center;
+	background-color: #FFFBEB;
+	border: solid #CCBB77 2px;
+	padding: 1rem;
+	z-index: 998;
+}
+
+/* Posisjonerer og formaterer navnet i footeren */
+footer .llamainc {
+	margin: 0;
+    position: relative;
+    left: 5px;
+    top: 12px;
+    float: left;
+    font-size: 20px;
+    text-shadow: #000000 1px 0px;
+}
+
+footer table {
+text-align: right;
+float: right;
+}
+
+footer p {
+display: inline-block;
+}
+
+
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||														||
+||	Det som følger her er min (Roberts) kode til index  ||
+||	Dere kan ta utgangspunkt i dette, men ikke nødvendig||
+||	SKAL IKKE ENDRES PÅ!			 					||
+||														||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+/* formaterer og posisjonerer alle overskrifter under content diven på index-siden, kan også til dels brukes som mal. */
+.content .llamainc {
+	text-align: center;
+	font-size: 32px;
+    text-shadow: #000000 1px 0px;
+}
+
+/* posisjonerer alle bildene i boksene på index siden, merk at det er laget en div som heter "content" som alt ligger under. */
+.content img{
+    float: left;
+    max-width: 435px;
+    box-shadow: black 1px 2px 5px;
+    max-height: 300px;
+    margin-left: 25px;
+    margin-right: 10px;
+ }
+.boxhead {
+	padding-bottom: 50px;
+}
+/* lager en ny box inni den første boxen, så du kan boxe når du boxer, kan brukes til dels som mal */
+.box1 {
+	
+	padding-top: 50px;
+	padding-bottom: 320px;
+	border-top: solid;
+}
+
+/* Lager og formaterer en ny box inni den første boxen, så du kan boxe når du boxer, kan brukes til dels som mal. */
+.box2 {
+	background-color: #fcf1c6;;
+	padding-top: 50px;
+	padding-bottom: 320px;
+	border-top: solid;
+}
+
+ /* posisjonerer og formaterer avsnittene */
+.content-text {
+	margin: 10px;
+	position: relative;
+	line-height: 1.3em;
+	font-size: 18px;
+	font-weight: bold;
+	left: 10px;
+	margin-right: 20px;
+}
+
+@media screen and (min-width: 600px) {
+.slide-container {
+	visibility: hidden;
+    position: relative;
+    text-align: center;
+	}
+}
+.index-slides {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+
+	.slide-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: rgba(220, 220, 220, 0.88);
+    border-radius: 40px;
+}
+
+
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||														||
+||	Det som følger her er min (Roberts) kode til gallery||
+||														||
+||	SKAL IKKE ENDRES PÅ!			 					||
+||														||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+/* lager en boks under overskriften for galleriet */
+.headbanner {
+	background-color: #f1e5b2;
+    height: max-content;
+    padding-top: 1px;
+}
+
+/* posisjonerer og formaterer overskriften for galleriet */
+.headbanner .llamainc {
+	font-size: 60px;
+    text-align: center;
+    text-shadow: #000000 3px 2px 5px;
+}
+
+/* Midtstiller table innenfor content-boxen */
+.gallery {
+	margin: auto;
+}
+
+/* Legger til en liten border på siden av bildene */
+.gallery td + td { 
+	border-left:2px solid #9C0707; 
+}
+
+/* Legger til en liten border under bildene */
+.gallery td { 
+	border-bottom:2px solid #9C0707; 
+}
+
+/* Fjerner bottom border fra den siste raden */
+.gallery tr:last-child td {
+	border-bottom: none;
+}
+
+/* formaterer og posisjonerer bildene i galleriet */
+.galleryimg {
+	height: auto;
+    width: 360px;
+    margin: 8px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+/* Fjerner link outline fra bildene og teksten i lightbox, setter også fargen på credit teksten i lightbox */
+.lightboxcontainer a {
+	text-decoration: none;
+	color: #fff8dd;
+}
+
+.lightbox {
+	/* gjør slik at alle "lightbox" bildene er gjemt, setter posisjonen til å alltid være midt på skjermen, setter størrelsen på bildene, setter bildet og teksten til å være midtstilt,
+	gjør bakgrunnen nesten helt svart, og gjør det slik at lightbox bildet alltid er på toppen */
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.98);
+	z-index: 999;
+}
+
+.lightbox img {
+	/* setter lightbox bildet litt lenger ned på siden */
+	margin-top: 150px;
+	max-width: 800px;
+	max-height: 700px;
+}
+
+.lightbox:target {
+	/*fjerner blå link rundt lightbox og viser lightbox bildet når den blir trykt på  */
+	outline: none;
+	display: block;
+}
+
+iframe {
+	width: 1903px; 
+	height: 764px;
+}
+/*
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+||														||
+||	Skriv CSS koden deres under her						||
+||														||
+||									 					||
+||														||
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+*/
+
+/* About us pagen */
+
+.aboutleft {
+    display: inline-block;
+    width: 47%;
+    background-color: #FFF8DD;
+
+
+}
+
+.aboutright {
+    float: right;
+    width: 52%;
+    background-color: #FFF8DD;
+    text-align: right;
+}
+
+.aboutright img {
+	width: 40%;
+	margin-top: 10px;
+	margin-right: 10px;
+	box-shadow: 0 0 0px 3px;
+}
+
+.aboutright div {
+	height: fit-content;
+	box-shadow: 0 0 0px 3px;
+}
+.aboutright div:nth-child(odd) {
+	background-color: #F1E5B2;
+}
+
+.aboutright div:nth-child(even) {
+	background-color: #fcf1c6;
+}
+
+.aboutright .content-text {
+	display: inline-block;
+	margin-right: 30px;
+}
+
+.about-text {
+	font-size: 22px;
+   font-family: 'Oswald', sans-serif;
+   margin-left:20px 
+
+}
+
+.image_text_about {
+	margin: 5px;
+	position: relative;
+	line-height: 2.0em;
+	font-size: 17px;
+	font-weight: bold;
+	left: -13px;
+	margin-right: 20px;	
+	display: inline-block;
+	margin-right: 30px;
+	text-align:center;
+}
+
+.content-box_about {
+	overflow: hidden;
+	position: relative;
+    top: 40px;
+    background-color: #ffffff;
+    width: 1200px;
+    margin: auto;
+    margin-bottom: 45px;
+    margin-left:10px;
+    border: solid #1d1d1d 2px;
+    box-shadow: 0px 0px 10px 2px #1D1D1D;
+
+}
+.text_about {
+	margin: 5px;
+	position: relative;
+	line-height: 2.0em;
+	font-size: 29px;
+	font-weight: bold;
+	left: -13px;
+	margin-right: 20px;	
+	display: inline-block;
+	margin-right: 30px;
+	text-align:center;
+	bottom:60px;
+
+}
+
+.class-list{
+font-size: 18px;
+top:1px;
+margin-left:15px;
+text-align:left;
+position: relative;
+display: inline-block;
+width:40%;
+bottom:20px;
+}
+
+.headbanner-about .llamainc {
+	font-size: 60px;
+    text-align: center;
+    text-shadow: #000000 3px 2px 5px;
+}
+
+
+.about_logo{
+display: inline-block;
+width: 42%;
+float:right;
+margin-top: -210px;
+}
+
+.Disclaimer{
+display: inline-block;
+float:right;
+font-size:8px;
+width:42%;
+margin-top:90px;
+}
+
+/* Contact us pagen */
+/* Denne blir gjort til en "Store Page" på del 2 av oppgaven tenker jeg, så er bare kjappt skrudd sammen */
+
+
+.contactbox1 img, .contactbox2 img {
+	margin: 10px;
+    max-height: 400px;
+    box-shadow: 0px 0px 5px 1px;
+}
+
+.contactbox1 .content-text, .contactbox2 .content-text {
+    display: inline-block;
+    width: 45%;
+}
+
+.contactbox1 .content-text {
+	top: -250px;
+}
+
+.contactbox2 {
+	background-color: #fcf1c6;
+
+}
+.contactbox2 .content-text {
+	top: -150px;
+}
+
+.address {
+	font-weight: initial;
+    float: right;
+    border: solid;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.locations {
+    min-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    font-family: 'Oswald', sans-serif;
+   
+}
+.locations, .locations tr, .locations th, .locations td {
+	border: solid black 1px;
+	border-collapse: collapse;
+}
+
+.locations caption {
+    font-size: 36px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.locations tr:nth-child(odd)  {
+	background-color: #fcf1c6;
+}
+
+.locations th {
+	text-align: center;
+	background-color: #d1ac67;
+}
+
+.locations td:nth-child(3) {
+	background-color: #BE3A3A;
+}
+
+.locations tr:nth-child(2) td:nth-child(3) {
+	background-color: #7BBE3A;
+}
+
+.crop-container {
+	position: relative;
+    width: 396px;
+    height: 378px;
+    overflow: hidden;
+}
+.crop-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+    /* Product Page */
+
+.alignright {
+	position: absolute;
+    left: 470px;
+}

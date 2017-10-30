@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Oswald|Wendy+One" rel="stylesheet">
+	<link href="Group02.css" rel="stylesheet" type="text/css">
+	<title>Llama Inc - Home</title>
+</head>
+<body>
+<nav>
+	<img class="llamanav" src="image/llamalogo.svg" alt="Llama Inc">
+	<h2 class="llamainc">Llama Inc.</h2>
+	<a href="index.html">Home</a>
+	<a href="products.html">Products</a>
+	<a href="contact.html">Contact Us</a>
+	<a href="gallery.html">Gallery</a>
+	<a href="about_us.html">About Us</a>
+</nav>
+	<a id="top"></a>
+<header>
+	<img class="llamapic" src="image/llamalogo.svg" alt="Llama Inc">
+	<h1 class="llamainc">Llama Inc.</h1>
+	<p class="tønne">En undergruppe av T&oslash;nneTorsdag Intoxicated.</p>
+
+</header>
+
+<div class="content-box">
+
+<div class="slide-container">
+
+	<div class="index-slides">
+		<img src="slideimage/slide1.jpg">
+		<div class="slide-text">
+			<p> Look at all this wonderfull text</p>		
+		</div>
+	</div>
+
+	<div class="index-slides">
+		<img src="slideimage/slide2.jpg">
+		<div class="slide-text">
+			<p>Is this text wonderfull? I think it's glorious!</p>
+		</div>
+	</div>
+
+	<div class="index-slides">
+		<img src="slideimage/slide3.jpg">
+		<div class="slide-text">
+			<p>This wonderful text aswell, such glorious.</p>	
+		</div>
+	</div>
+
+	<div class="index-slides">
+		<img src="slideimage/slide4.jpg">
+		<div class="slide-text">
+			<p>This text is just wow... Much wow.</p>
+		</div>
+	</div>
+
+	<button onclick="changeSlide(-1)">&#10094;</button>
+	<button onclick="changeSlide(+1)">&#10095;</button>
+
+</div>
+<script type="text/javascript">
+var slides = 1;
+slideShow(slides);
+
+function changeSlide(n) {
+    slideShow(slides += n);
+}
+
+function slideShow(n) {
+    var i;
+    var x = document.getElementsByClassName("index-slides");
+    if (n > x.length) {slides = 1} 
+    if (n < 1) {slides = x.length};
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    slides++;
+    if (slides > x.length) {slides = 1} 
+    x[slides-1].style.display = "block"; 
+    setTimeout(slideShow, 2000); 
+}
+</script>
+
+	<div class="content">
+		<div class="box1">
+				<img src="image/smilellama.jpg" alt="Llama picture">
+			<div class="alignright">
+				<h2 class="llamainc">
+					Who... <u>WHAT</u> are we?</h2>
+			
+				<p class="content-text">
+				<span class="llamaincp">Llama Inc</span> is a small eco-friendly business. All our products are vegan and organic. Our main concern is the wellbeing of our lovley llamas who provide us with the fuzzy fluffiness that is their amazingly soft wool. For every product we sell, 10 NOK are donated to organized fun activities for our llamas in the weekends. Our goal is to provide the world with the experience of smooth warmness like no other, that our products and our products <u>only</u>, can make you experience. Each of our llamas have a personal groomer who cares especially for his or her personalized needs and wellbeing. We love our llamas and always do our best to provide them with the best llama-friendly enviroment.
+				</p>
+			</div>
+		</div> 
+		<div class="box2">
+			<img src="image/productimage.jpg" alt="Our products">
+			<div class="alignright">
+				<h2 class="llamainc">
+					Our products</h2>
+				<p class="content-text">
+					Our products are made only from the finest, most beautiful pieces of wool that we get from our our llamas. Whatever excess wool is left we make products with, allthough we do not put these products up for sale we do give them away to people in need. Every single product is handmade with llama-love. We recommend folllowing our washing instructions carefully in order to keep the products in their best possible fuzzy, fluffy condition for as long as possible.
+				</p>
+			</div>
+		</div>
+
+		<div class="box1">
+			<img src="image/fatllama.jpg" alt="Llama picture">
+			<div class="alignright">
+				<h2 class="llamainc">
+					Glama the Llama</h2>
+				<p class="content-text">
+					Our oldest llama is our beloved Glama who is 25 years old, which is amazing for a llama since their life expectency is 20 years of age <a href="#llamaNG"><sup>1</sup></a>. Glama is a very kind and friendly llama who loves long walks on the beach and hanging out with other llamas and the caregivers. It's impossible to not get charmed by Glama as she lights up everyones day with her presence. Glama has always had extraordinary voluminous wool that grows considerably faster then our average llama. Glama enjoys attention and grooming. And we feel extremly lucky to have such a wonderful llama like Glama in our lives.
+					<br>
+					<br>
+					<br>
+					<br>
+					<a id="llamaNG"><sup>1</sup></a>Want to know more about Llamas? <a href="http://www.nationalgeographic.com/animals/mammals/l/llama/">this article</a> on National Geographic is a great read!
+				</p>
+			</div>
+		</div> 
+	</div>
+</div>
+<footer> <!-- OM NOEN HER LYST TIL Å FERDIGSTILLE FOOTEREN HAR DE LOV TIL DET -->
+	<a href="#top"><img class="llamanav" src="image/llamalogo.svg" alt="Llama Inc"></a>
+	<h2 class="llamainc">Llama Inc.</h2> 
+	<p> Copyright © 2017 Llama Inc, All rights reserved<br>
+		Date of project start: 16.09.17</p>
+	<table>
+		<tr>
+			<th>Email: </th>
+			<td><a href="mailto:llamaincorp@gmail.com">llamaincorp@gmail.com</a></td>
+		</tr>
+		<tr>
+			<th>Phone: </th>
+			<td>0047 333 00 666</td>
+		</tr>
+		<tr>
+			<th>Visiting Address: </th>
+			<td>Langt-uti-gok 42b, 3801 Bø, Norway</td>
+		</tr>
+	</table>
+</footer>
+</body>
+</html>
