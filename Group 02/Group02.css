@@ -229,7 +229,7 @@ display: inline-block;
 .box1 {
 	
 	padding-top: 50px;
-	padding-bottom: 320px;
+	padding-bottom: 330px;
 	border-top: solid;
 }
 
@@ -252,28 +252,8 @@ display: inline-block;
 	margin-right: 20px;
 }
 
-@media screen and (min-width: 600px) {
-.slide-container {
-	visibility: hidden;
-    position: relative;
-    text-align: center;
-	}
-}
-.index-slides {
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-}
 
 
-	.slide-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding-left: 5px;
-    padding-right: 5px;
-    background-color: rgba(220, 220, 220, 0.88);
-    border-radius: 40px;
-}
 
 
 /*
@@ -298,6 +278,14 @@ display: inline-block;
 	font-size: 60px;
     text-align: center;
     text-shadow: #000000 3px 2px 5px;
+}
+
+/* Gjemmer galeriet for desktop */
+@media screen and (min-width: 1024px){
+	.gallery, .galleryimg, .lightboxcontainer, .lightbox, iframe{
+		visibility: hidden;
+		display: none;
+	}
 }
 
 /* Midtstiller table innenfor content-boxen */
@@ -366,6 +354,35 @@ iframe {
 	width: 1903px; 
 	height: 764px;
 }
+
+/* Gallery slider for desktop */
+@media screen and (max-width: 600px){
+	.slide-container, .gallery-slides, .slide-text{
+		visibility: hidden;
+		display: none;
+	}
+}
+
+.slide-container {
+	text-align: center;
+
+	}
+
+.gallery-slides {
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+	
+}
+
+.gallery-slides img {
+	height: 450px;
+	margin: 10px;
+}
+
+
+	.slide-text {
+
+}
+
 /*
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||														||

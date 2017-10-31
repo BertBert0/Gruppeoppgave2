@@ -24,64 +24,6 @@
 </header>
 
 <div class="content-box">
-
-<div class="slide-container">
-
-	<div class="index-slides">
-		<img src="slideimage/slide1.jpg">
-		<div class="slide-text">
-			<p> Look at all this wonderfull text</p>		
-		</div>
-	</div>
-
-	<div class="index-slides">
-		<img src="slideimage/slide2.jpg">
-		<div class="slide-text">
-			<p>Is this text wonderfull? I think it's glorious!</p>
-		</div>
-	</div>
-
-	<div class="index-slides">
-		<img src="slideimage/slide3.jpg">
-		<div class="slide-text">
-			<p>This wonderful text aswell, such glorious.</p>	
-		</div>
-	</div>
-
-	<div class="index-slides">
-		<img src="slideimage/slide4.jpg">
-		<div class="slide-text">
-			<p>This text is just wow... Much wow.</p>
-		</div>
-	</div>
-
-	<button onclick="changeSlide(-1)">&#10094;</button>
-	<button onclick="changeSlide(+1)">&#10095;</button>
-
-</div>
-<script type="text/javascript">
-var slides = 1;
-slideShow(slides);
-
-function changeSlide(n) {
-    slideShow(slides += n);
-}
-
-function slideShow(n) {
-    var i;
-    var x = document.getElementsByClassName("index-slides");
-    if (n > x.length) {slides = 1} 
-    if (n < 1) {slides = x.length};
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none"; 
-    }
-    slides++;
-    if (slides > x.length) {slides = 1} 
-    x[slides-1].style.display = "block"; 
-    setTimeout(slideShow, 2000); 
-}
-</script>
-
 	<div class="content">
 		<div class="box1">
 				<img src="image/smilellama.jpg" alt="Llama picture">
@@ -118,6 +60,7 @@ function slideShow(n) {
 					<br>
 					<a id="llamaNG"><sup>1</sup></a>Want to know more about Llamas? <a href="http://www.nationalgeographic.com/animals/mammals/l/llama/">this article</a> on National Geographic is a great read!
 				</p>
+
 			</div>
 		</div> 
 	</div>

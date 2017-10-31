@@ -3,6 +3,7 @@
 <head>
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Wendy+One" rel="stylesheet">
 	<link href="Group02.css" rel="stylesheet" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Llama Inc - Gallery</title>
 </head>
 <body>
@@ -28,6 +29,118 @@
 	<div class="headbanner">
 	<h2 class="llamainc"> Galerie de Llama </h2>
 </div>
+<div class="slide-container">
+
+	<div class="gallery-slides">
+		<img src="image/majesticllama.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: ddgreenberg @ pinterest.co.uk</p>		
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/scarfllama.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: alphacoders.com</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/woolbasket.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: mountainjamllamas.com</p>	
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/wool2.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: thefiberofmybeing.net</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llamajacket.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: pinterest.com </p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llamacorn.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: miachoppel @ pinterest.com</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llama1.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: Homa M. Atashgahi</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llama2.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: Homa M. Atashgahi</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llama3.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: Homa M. Atashgahi</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llama4.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: Homa M. Atashgahi</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/fatllama.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: heavy.com</p>
+		</div>
+	</div>
+
+	<div class="gallery-slides">
+		<img src="image/llamasong.jpg" alt="Llama Inc Gallery">
+		<div class="slide-text">
+			<p>Credit: issa twaimz @ youtube.com</p>
+		</div>
+	</div>
+
+	<button onclick="changeSlide(-1)">&#10094;</button>
+	<button onclick="changeSlide(+1)">&#10095;</button>
+
+</div>
+<script type="text/javascript">
+var slides = 1;
+slideShow(slides);
+
+function changeSlide(n) {
+    slideShow(slides += n);
+}
+
+function slideShow(n) {
+    var i;
+    var x = document.getElementsByClassName("gallery-slides");
+    if (n > x.length) {slides = 1} 
+    if (n < 1) {slides = x.length};
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none"; 
+    }
+    slides++;
+    if (slides > x.length) {slides = 1} 
+    x[slides-1].style.display = "block"; 
+    setTimeout(slideShow, 2000); 
+}
+</script>
 	<table class="gallery">
 		<tr>
 			<td class="crop-container"><a href="#img1"><img class="galleryimg" src="image/majesticllama.jpg" alt="Llama Inc Gallery"></a></td>
