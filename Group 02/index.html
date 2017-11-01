@@ -7,6 +7,8 @@
 	<title>Llama Inc - Home</title>
 </head>
 <body>
+
+	<div class="desktophead">
 <nav>
 	<img class="llamanav" src="image/llamalogo.svg" alt="Llama Inc">
 	<h2 class="llamainc">Llama Inc.</h2>
@@ -23,6 +25,43 @@
 	<p class="tønne">En undergruppe av T&oslash;nneTorsdag Intoxicated.</p>
 
 </header>
+</div>
+
+<div class="mobilehead">
+	<header>
+		<button class="menu" onclick="menuJS()"></button>
+		
+		<nav>
+
+			<ul id="dropdown" class="menulist">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="products.html">Products</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact Us</a>
+				</li>
+				<li>
+					<a href="gallery.html">Gallery</a>
+				</li>
+				<li>
+					<a href="about_us.html">About Us</a>
+				</li>
+			</ul>
+		</nav>
+		<img class="llamanav" src="image/llamalogo.svg" alt="Llama Inc">
+		<h2 class="llamainc">Llama Inc.</h2>
+	
+	<script type="text/javascript">
+			function menuJS(){
+				document.getElementById("dropdown").classList.toggle("menuShow");
+			}
+		</script>
+		
+	</header>
+</div>
 
 <div class="content-box">
 

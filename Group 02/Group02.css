@@ -1,9 +1,3 @@
-/* Note: This CSS file is not by any stretch of the imagination organized according to industry standards.
-Partially because having more than one person working on the same thing have proven difficult to organize.
-And partially because we're all still learning. I suspect this will be pointed out on the feedback 
-and will be rectified during the next assignment. */
-
-
 /*
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||														||
@@ -28,6 +22,205 @@ and will be rectified during the next assignment. */
 	text-decoration: overline;
 }
 
+/* Setter fonten i alle avsnitt til å være den samme */
+p {
+	font-family: 'Oswald', sans-serif;
+}
+
+
+/*				 **
+**  Mobile view  **
+**		&		 **
+**	Tablet view	 **
+**				 */
+
+@media screen and (max-width: 1024px){
+
+/* Generell Mobil	**
+**		&			**
+**	Tablet kode 	**
+**					*/
+
+/* Gjemmer desktop kode */
+.desktophead, .desktopfoot {
+	visibility: hidden;
+	display: none;
+}
+
+
+
+/* Nav-bar */
+header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	border: solid #CCBB77 2px;
+	background-color: #FFFBEB;
+	min-width: 99%;
+	max-width: 99%;
+}
+
+
+.menu {
+	display:inline-block;
+	width: 40px;
+	height: 40px;
+	background: #d65858 url(image/menuicon.png) center;
+	background-size: 35px 35px;
+}
+
+#icon{
+	width: 40px;
+	display: inline-block;
+}
+
+#dropdown{
+		display: none;
+}
+
+	.menulist { 
+	
+		list-style: none;
+		position: absolute;
+		left: 5px;
+   		top: 25px;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		width: 25%;
+		border-radius: 4px 0 4px 4px;
+}
+
+
+	.menulist li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+
+	}
+
+	.menuShow {
+		display: block;
+	}
+
+
+.llamanav, .llamainc, nav {
+	display: inline-block;
+}
+
+.llamanav{
+	max-width: 10%;
+
+}
+
+
+
+
+
+
+
+
+
+/* 					**
+** Kode for galleri **
+/*					**
+
+/* Gjemmer slideren */
+
+	.slide-container, .gallery-slides, .slide-text{
+		visibility: hidden;
+		display: none;
+	}
+
+
+
+/* Midtstiller table innenfor content-boxen */
+.gallery {
+	margin: auto;
+}
+
+/* Legger til en liten border på siden av bildene */
+.gallery td + td { 
+	border-left:2px solid #9C0707; 
+}
+
+/* Legger til en liten border under bildene */
+.gallery td { 
+	border-bottom:2px solid #9C0707; 
+}
+
+/* Fjerner bottom border fra den siste raden */
+.gallery tr:last-child td {
+	border-bottom: none;
+}
+
+/* formaterer og posisjonerer bildene i galleriet */
+.galleryimg {
+	height: auto;
+    width: 360px;
+    margin: 8px;
+    margin-right: 16px;
+    margin-left: 16px;
+}
+
+/* Fjerner link outline fra bildene og teksten i lightbox, setter også fargen på credit teksten i lightbox */
+.lightboxcontainer a {
+	text-decoration: none;
+	color: #fff8dd;
+}
+
+.lightbox {
+	/* gjør slik at alle "lightbox" bildene er gjemt, setter posisjonen til å alltid være midt på skjermen, setter størrelsen på bildene, setter bildet og teksten til å være midtstilt,
+	gjør bakgrunnen nesten helt svart, og gjør det slik at lightbox bildet alltid er på toppen */
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	background: rgba(0,0,0,0.98);
+	z-index: 999;
+}
+
+.lightbox img {
+	/* setter lightbox bildet litt lenger ned på siden */
+	margin-top: 150px;
+	max-width: 800px;
+	max-height: 700px;
+}
+
+.lightbox:target {
+	/*fjerner blå link rundt lightbox og viser lightbox bildet når den blir trykt på  */
+	outline: none;
+	display: block;
+}
+
+iframe {
+	width: 1903px; 
+	height: 764px;
+}
+
+
+}
+
+
+/*					**
+**	Desktop view	**
+**					*/
+
+
+@media screen and (min-width:1024px){
+
+/* Gjemmer/skrur av mobile/tablet kode */
+.mobilehead, .mobilefoot {
+	visibility: none;
+	display: none;
+}
+
 /* Denne diven lager boksen som står midt på siden, det er inne i denne boksen alt content på siden skal ligge */
 .content-box {
 	overflow: hidden;
@@ -39,11 +232,6 @@ and will be rectified during the next assignment. */
     margin-bottom: 45px;
     border: solid #1d1d1d 2px;
     box-shadow: 0px 0px 10px 2px #1D1D1D;
-}
-
-/* Setter fonten i alle avsnitt til å være den samme */
-p {
-	font-family: 'Oswald', sans-serif;
 }
 
 
@@ -281,88 +469,14 @@ display: inline-block;
 }
 
 /* Gjemmer galeriet for desktop */
-@media screen and (min-width: 1024px){
 	.gallery, .galleryimg, .lightboxcontainer, .lightbox, iframe{
 		visibility: hidden;
 		display: none;
-	}
+	
 }
 
-/* Midtstiller table innenfor content-boxen */
-.gallery {
-	margin: auto;
-}
-
-/* Legger til en liten border på siden av bildene */
-.gallery td + td { 
-	border-left:2px solid #9C0707; 
-}
-
-/* Legger til en liten border under bildene */
-.gallery td { 
-	border-bottom:2px solid #9C0707; 
-}
-
-/* Fjerner bottom border fra den siste raden */
-.gallery tr:last-child td {
-	border-bottom: none;
-}
-
-/* formaterer og posisjonerer bildene i galleriet */
-.galleryimg {
-	height: auto;
-    width: 360px;
-    margin: 8px;
-    margin-right: 16px;
-    margin-left: 16px;
-}
-
-/* Fjerner link outline fra bildene og teksten i lightbox, setter også fargen på credit teksten i lightbox */
-.lightboxcontainer a {
-	text-decoration: none;
-	color: #fff8dd;
-}
-
-.lightbox {
-	/* gjør slik at alle "lightbox" bildene er gjemt, setter posisjonen til å alltid være midt på skjermen, setter størrelsen på bildene, setter bildet og teksten til å være midtstilt,
-	gjør bakgrunnen nesten helt svart, og gjør det slik at lightbox bildet alltid er på toppen */
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	background: rgba(0,0,0,0.98);
-	z-index: 999;
-}
-
-.lightbox img {
-	/* setter lightbox bildet litt lenger ned på siden */
-	margin-top: 150px;
-	max-width: 800px;
-	max-height: 700px;
-}
-
-.lightbox:target {
-	/*fjerner blå link rundt lightbox og viser lightbox bildet når den blir trykt på  */
-	outline: none;
-	display: block;
-}
-
-iframe {
-	width: 1903px; 
-	height: 764px;
-}
 
 /* Gallery slider for desktop */
-@media screen and (max-width: 1024px){
-	.slide-container, .gallery-slides, .slide-text{
-		visibility: hidden;
-		display: none;
-	}
-}
-
 .slide-container {
 	text-align: center;
 
@@ -603,4 +717,7 @@ margin-top:90px;
 .alignright {
 	position: absolute;
     left: 470px;
+}
+
+
 }
