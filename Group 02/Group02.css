@@ -34,7 +34,7 @@ p {
 **	Tablet view	 **
 **				 */
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1023px){
 
 /* Generell Mobil	**
 **		&			**
@@ -213,7 +213,7 @@ iframe {
 **					*/
 
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1023px){
 
 /* Gjemmer/skrur av mobile/tablet kode */
 .mobilehead, .mobilefoot {
@@ -227,7 +227,7 @@ iframe {
 	position: relative;
     top: 40px;
     background-color: #FFF8DD;
-    width: 1200px;
+    width: 1023px;
     margin: auto;
     margin-bottom: 45px;
     border: solid #1d1d1d 2px;
@@ -260,8 +260,8 @@ header {
 	linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
 	url(image/llamaheader.jpg);
 	background-size: cover;
-	min-width: 1200px;
-	max-width: 1200px;
+	min-width: 1023px;
+	max-width: 1023px;
 	max-height: 250px;
 	border: solid 2px;
 	margin: auto;
@@ -281,8 +281,8 @@ header {
 /* Denne styrer posisjonen og noe av formateringen av navnet i headeren. */
 header .llamainc {
 	position: relative;
-	bottom: 260px;
-    left: 260px;
+	bottom: 215px;
+    left: 230px;
     font-size: 86px;
 	text-shadow: #000000 5px 3px;
 }
@@ -307,7 +307,7 @@ nav {
 	right: 0;
 	text-align: center;
 	background-color: #FFFBEB;
-	min-width: 1200px;
+	min-width: 1023px;
 	border: solid #CCBB77 2px;
 	z-index: 999;
 }
@@ -332,8 +332,8 @@ nav .llamainc {
 /* posisjonerer og formaterer knappene i navbaren */
 nav a {
 	position: relative;
-    right: 70px;
-	margin-right: -6px;
+    right: -7px;
+	margin-right: -7px;
 	background: linear-gradient(to bottom left, #FEF1BC, #FAF2D0);
 	padding: 10px;
 	border:solid #F1E5B2 2px;
@@ -573,7 +573,7 @@ display: inline-block;
 	position: relative;
     top: 40px;
     background-color: #ffffff;
-    width: 1200px;
+    width: 1023px;
     margin: auto;
     margin-bottom: 45px;
     margin-left:10px;
@@ -635,7 +635,7 @@ margin-top:90px;
 
 .contactbox1 img, .contactbox2 img {
 	margin: 10px;
-    max-height: 400px;
+    max-height: 338px;
     box-shadow: 0px 0px 5px 1px;
 }
 
@@ -645,7 +645,7 @@ margin-top:90px;
 }
 
 .contactbox1 .content-text {
-	top: -250px;
+	top: -175px;
 }
 
 .contactbox2 {
@@ -653,7 +653,7 @@ margin-top:90px;
 
 }
 .contactbox2 .content-text {
-	top: -150px;
+	top: -85px;
 }
 
 .address {
