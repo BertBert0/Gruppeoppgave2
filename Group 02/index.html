@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-git.js"></script> 
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Wendy+One" rel="stylesheet">
 	<link href="Group02.css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -29,7 +30,7 @@
 
 <div class="mobilehead">
 	<header>
-		<button class="menu" onclick="menuJS()"></button>
+		<button class="menu"></button>
 		
 		<nav>
 
@@ -55,9 +56,9 @@
 		<h2 class="llamainc">Llama Inc.</h2>
 	
 	<script type="text/javascript">
-			function menuJS(){
-				document.getElementById("dropdown").classList.toggle("menuShow");
-			}
+				$('.menu').click(function(){
+					$("#dropdown").toggle()
+				});
 		</script>
 		
 	</header>

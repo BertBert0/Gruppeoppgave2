@@ -47,44 +47,37 @@ p {
 	display: none;
 }
 
-
-
-/* Nav-bar */
+/* Lager header med nav,osv */
 header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
 	border: solid #CCBB77 2px;
 	background-color: #FFFBEB;
 	min-width: 99%;
 	max-width: 99%;
+	height: 10%;
+	margin: auto;
+    margin-bottom: 5%;
 }
 
 
+/* Lager meny knappen */
 .menu {
-	display:inline-block;
 	width: 40px;
 	height: 40px;
 	background: #d65858 url(image/menuicon.png) center;
 	background-size: 35px 35px;
 }
 
-#icon{
-	width: 40px;
-	display: inline-block;
-}
-
+/* Gjemmer dropdown menyen */
 #dropdown{
 		display: none;
 }
-
+/* formaterer menyen */
 	.menulist { 
 	
 		list-style: none;
 		position: absolute;
-		left: 5px;
-   		top: 25px;
+		left: 10px;
+   		top: 90px;
 		padding: 20px;
 		background: #fff;
 		border: 5px solid #444;
@@ -92,7 +85,7 @@ header {
 		border-radius: 4px 0 4px 4px;
 }
 
-
+/* formaterer liste elementene i menyen */
 	.menulist li {
 
 		text-align: center;
@@ -102,25 +95,93 @@ header {
 
 	}
 
-	.menuShow {
-		display: block;
-	}
-
-
-.llamanav, .llamainc, nav {
+/* Setter alle elementer i header ved siden av hverandre */
+.llamanav, .llamainc, .menu, nav {
 	display: inline-block;
+	margin-left: 10px;
 }
 
 .llamanav{
 	max-width: 10%;
+	position: relative;
+    top: 0.6em;
 
 }
 
+.content-box {
+	text-align: center;
+    background-color: #f1e5b2;
+    margin: 5px;
+    padding: 1em;
+    box-shadow: 0px 0px 10px 2px #1D1D1D;
+}
+
+.content-box img {
+	max-width: 	80%;
+}
+.content-text {
+		margin: 10px;
+}
+
+
+/* Lager footer boksen */
+footer {
+	position: absolute;
+	background-color: #FFFBEB;
+	border: solid #CCBB77 2px;
+	padding: 1rem;
+	z-index: 998;
+}
+
+/* Posisjonerer og formaterer navnet i footeren */
+footer .llamainc {
+    font-size: 20px;
+    text-shadow: #000000 1px 0px;
+    position: relative;
+    bottom: 10px;
+}
+
+footer table {
+text-align: right;
+float: right;
+}
+
+footer p {
+display: inline-block;
+float: 	right;	
+}
+
+}
+/* Nav-bar */
+/*Mobile */
+@media screen and (max-width: 640px){
+
+
+
+
+}
+/* Nav-bar */
+/* Tablet */
+		
 
 
 
 
 
+/*Mobile Index */
+.box1, .box2 {
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+.box1 {
+	background-color: #FFF8DD;
+}
+
+/* Lager og formaterer en ny box inni den første boxen, så du kan boxe når du boxer, kan brukes til dels som mal. */
+.box2 {
+	background-color: #fcf1c6;
+}
 
 
 
@@ -205,7 +266,7 @@ iframe {
 }
 
 
-}
+
 
 
 /*					**

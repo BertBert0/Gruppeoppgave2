@@ -1,16 +1,15 @@
-<!-- 
-			Det som følger her er basic strukturen til alle våre dokumenter!
--->
 <!DOCTYPE html>
 <html>
 <head>
+	<script src="https://code.jquery.com/jquery-git.js"></script> 
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Wendy+One" rel="stylesheet">
 	<link href="Group02.css" rel="stylesheet" type="text/css">
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-	<title>Llama Inc - Our Products</title> <!-- LEGG INN TITTEL PÅ SIDEN DIN HER -->
+	<title>Llama Inc - Home</title>
 </head>
 <body>
-<a id="top"></a>
+
+	<div class="desktophead">
 <nav>
 	<img class="llamanav" src="image/llamalogo.svg" alt="Llama Inc">
 	<h2 class="llamainc">Llama Inc.</h2>
@@ -20,13 +19,50 @@
 	<a href="gallery.html">Gallery</a>
 	<a href="about_us.html">About Us</a>
 </nav>
-	
+	<a id="top"></a>
 <header>
 	<img class="llamapic" src="image/llamalogo.svg" alt="Llama Inc">
 	<h1 class="llamainc">Llama Inc.</h1>
 	<p class="tønne">En undergruppe av T&oslash;nneTorsdag Intoxicated.</p>
 
 </header>
+</div>
+
+<div class="mobilehead">
+	<header>
+		<button class="menu"></button>
+		
+		<nav>
+
+			<ul id="dropdown" class="menulist">
+				<li>
+					<a href="index.html">Home</a>
+				</li>
+				<li>
+					<a href="products.html">Products</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact Us</a>
+				</li>
+				<li>
+					<a href="gallery.html">Gallery</a>
+				</li>
+				<li>
+					<a href="about_us.html">About Us</a>
+				</li>
+			</ul>
+		</nav>
+		<img class="llamanav" src="image/llamalogo.svg" alt="Llama Inc">
+		<h2 class="llamainc">Llama Inc.</h2>
+	
+	<script type="text/javascript">
+				$('.menu').click(function(){
+					$("#dropdown").toggle()
+				});
+		</script>
+		
+	</header>
+</div>
 
 <div class="content-box">
 	
