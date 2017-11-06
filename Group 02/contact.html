@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 	<script src="https://code.jquery.com/jquery-git.js"></script> 
 	<link href="https://fonts.googleapis.com/css?family=Oswald|Wendy+One" rel="stylesheet">
 	<link href="Group02.css" rel="stylesheet" type="text/css">
@@ -82,8 +83,62 @@
 				To reach <span class="llamaincp">The Llama-Barn</span> first you obviously got to step off the boat. Follow the road to the north-east until you reach the log and take a right, if you brought mountain-climbing gear ignore the map and just keep going north-east. When you've passed the burnt-down hut adjust course 8 degrees due east and keep going. If you did <u>not</u> bring mountain-climbing gear keep following the road that is now taking you due south until you see the lighthouse, then take the first left. Then simply follow the road past the orchard. At the top of the hill take a left and you're there!<br><span class="address"> Langt-ut-i-gok 42b <br> 3801 Bø.</span> <br>
 				Alternatively, plot this address into your GPS:
 		</p>
-		<img src="image/directions.jpg" alt="Directions">
+		<div id="kart-container">
+    <div id="kart">
+    <script>
+      // Note: This example requires that you consent to location sharing when
+      // prompted by your browser. If you see the error "The Geolocation service
+      // failed.", it means you probably did not give permission for the browser to
+      // locate you.
+
+      var map, infoWindow;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('kart'), {
+          center: {lat:  59.40705, lng: 9.06832},
+          zoom: 13
+        });
+        infoWindow = new google.maps.InfoWindow;
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+
+            infoWindow.setPosition(pos);
+            infoWindow.setContent('Location found.');
+            infoWindow.open(map);
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+      }
+
+      function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+        infoWindow.setPosition(pos);
+        infoWindow.setContent(browserHasGeolocation ?
+                              'Error: The Geolocation service failed.' :
+                              'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.open(map);
+      }
+
+    </script>
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?AIzaSyD4ktjV1rsD_OXqrrDHnaZ4MQKGbPIoDJU&callback=initMap">
+    </script>
+    </div>
 	</div>
+	</div>
+
+
+
 
 	<table class="locations">
 		<caption class="llamainc">Our locations around the world</caption>
@@ -134,7 +189,7 @@
 	<table>
 		<tr>
 			<th>Email: </th>
-			<td><a href="mailto:llamaincorp@gmail.com">llamaincorp@gmail.com</a></td>
+			<td><a href="/cdn-cgi/l/email-protection#1b77777a767a72757874696b5b7c767a727735787476"><span class="__cf_email__" data-cfemail="81edede0ece0e8efe2eef3f1c1e6ece0e8edafe2eeec">[email&#160;protected]</span></a></td>
 		</tr>
 		<tr>
 			<th>Phone: </th>
@@ -146,5 +201,10 @@
 		</tr>
 	</table>
 </footer>
-</body>
+
+
+
+
+
+<script src="/cdn-cgi/scripts/78d64697/cloudflare-static/email-decode.min.js"></script></body>
 </html>

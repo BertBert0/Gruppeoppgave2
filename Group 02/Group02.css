@@ -1,3 +1,14 @@
+#kart {
+	
+}
+
+
+#kart div {
+        max-height: 10%;
+        max-width:10%;
+      }
+
+
 /*
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 ||														||
@@ -42,10 +53,11 @@ p {
 **					*/
 
 /* Gjemmer desktop kode */
-.desktophead {
+.desktophead, .slide-container, .gallery-slides, .slide-text {
 	visibility: hidden;
 	display: none;
 }
+
 
 header {
 	border: solid #CCBB77 2px;
@@ -231,10 +243,7 @@ float: 	right;
 
 /* Gjemmer slideren */
 
-	.slide-container, .gallery-slides, .slide-text{
-		visibility: hidden;
-		display: none;
-	}
+
 
 
 
@@ -262,9 +271,8 @@ float: 	right;
 .galleryimg {
 	height: auto;
     width: 360px;
-    margin: 8px;
-    margin-right: 16px;
-    margin-left: 16px;
+    margin: 0.2rem;
+
 }
 
 /* Fjerner link outline fra bildene og teksten i lightbox, setter også fargen på credit teksten i lightbox */
