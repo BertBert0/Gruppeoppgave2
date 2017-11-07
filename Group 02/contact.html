@@ -84,18 +84,36 @@
 		</p>
 
     <div id="kart">
+
 <script>
-	
-function myMap() {
-    var mapOptions = {
-        center: new google.maps.LatLng(59.40705, 9.06832),
-        zoom: 13,
-        mapTypeId: google.maps.MapTypeId.HYBRID
+function getLocation() {
+        navigator.geolocation.getCurrentPosition(showPosition);
     }
-var map = new google.maps.Map(document.getElementById("kart"), mapOptions);
+    
+
+function showPosition(position) {
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    var latlon = new google.maps.LatLng(lat, lon)
+    var mapholder = document.getElementById('kart')
+
+    var vi = new google.maps.LatLng(59.40705, 9.06832)
+    var myOptions = {
+    center:latlon,zoom:12,
+    mapTypeId:google.maps.MapTypeId.ROADMAP,
+    mapTypeControl:false,
+    navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+    }
+
+
+    var map = new google.maps.Map(document.getElementById("kart"), myOptions);
+    var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+    var markerLlama = new google.maps.Marker({position:vi,map:map,title:"Here we are!.. Bitches!"});
+
 }
+
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+<script src="https://maps.googleapis.com/maps/api/js?callback=getLocation"></script>
  
     </div>
 	</div>
@@ -153,7 +171,7 @@ var map = new google.maps.Map(document.getElementById("kart"), mapOptions);
 	<table>
 		<tr>
 			<th>Email: </th>
-			<td><a href="/cdn-cgi/l/email-protection#1b77777a767a72757874696b5b7c767a727735787476"><span class="__cf_email__" data-cfemail="81edede0ece0e8efe2eef3f1c1e6ece0e8edafe2eeec">[email&#160;protected]</span></a></td>
+			<td><a href="mailto:llamaincorp@gmail.com">llamaincorp@gmail.com</a></td>
 		</tr>
 		<tr>
 			<th>Phone: </th>
@@ -161,14 +179,9 @@ var map = new google.maps.Map(document.getElementById("kart"), mapOptions);
 		</tr>
 		<tr>
 			<th>Visiting Address: </th>
-			<td>Langt-uti-gok 42b, 3801 B&oslash;, Norway</td>
+			<td>Langt-uti-gok 42b, 3801 Bø, Norway</td>
 		</tr>
 	</table>
 </footer>
-
-
-
-
-
-<script src="/cdn-cgi/scripts/78d64697/cloudflare-static/email-decode.min.js"></script></body>
+</body>
 </html>

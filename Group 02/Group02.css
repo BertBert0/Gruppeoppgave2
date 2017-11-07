@@ -156,11 +156,10 @@ float: 	right;
 		list-style: none;
 		position: absolute;
 		left: 10px;
-   		top: 90px;
-		padding: 20px;
+		padding: 0;
 		background: #fff;
 		border: 5px solid #444;
-		width: 25%;
+		width: 45%;
 		border-radius: 4px 0 4px 4px;
 }
 
@@ -174,8 +173,8 @@ float: 	right;
 
 	}
 
-	.menulist li a {
-
+	.menulist li:nth-child(odd) {
+		background: #fcf1c6;
 	}
 
 
