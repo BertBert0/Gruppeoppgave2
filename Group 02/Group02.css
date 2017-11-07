@@ -1,11 +1,11 @@
 #kart {
-	
+	width: 400px;
+	height: 400px;
 }
 
 
 #kart div {
-        max-height: 10%;
-        max-width:10%;
+
       }
 
 
@@ -142,6 +142,7 @@ float: 	right;
 /* Gjemmer dropdown menyen */
 #dropdown{
 		display: none;
+		background-color: #f1e5b2;
 }
 /* formaterer menyen */
 	.menulist { 
@@ -164,6 +165,10 @@ float: 	right;
 		width: 100%;
 		padding: 10px 0;
 		margin: 0;
+
+	}
+
+	.menulist li a {
 
 	}
 
@@ -194,9 +199,9 @@ float: 	right;
     margin-left: -3px;
     border-radius: 5px;
 	background: linear-gradient(to bottom left, #FEF1BC, #FAF2D0);
-	padding: 0.5em;
+	padding: 0.3em;
 	border:solid #F1E5B2 2px;
-    width: 6em;
+    width: 6.3em;
     
 }
 
@@ -322,7 +327,7 @@ iframe {
 **					*/
 
 
-@media screen and (min-width:1024px){
+@media screen and (min-width:1025px){
 
 /* Gjemmer/skrur av mobile/tablet kode */
 .mobilehead, .mobilefoot {
