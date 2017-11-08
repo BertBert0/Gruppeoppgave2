@@ -154,30 +154,27 @@
 		</div>
 	</div>
 
-	<button onclick="changeSlide(-1)">&#10094;</button>
-	<button onclick="changeSlide(+1)">&#10095;</button>
+	<button class="button-left"  onclick="plusDivs(-1)">&#10094;</button>
+	<button class="button-right" onclick="plusDivs(+1)">&#10095;</button>
 
 </div>
 <script type="text/javascript">
-var slides = 1;
-slideShow(slides);
+var slideIndex = 1;
+showDivs(slideIndex);
 
-function changeSlide(n) {
-    slideShow(slides += n);
+function plusDivs(n) {
+    showDivs(slideIndex += n);
 }
 
-function slideShow(n) {
+function showDivs(n) {
     var i;
     var x = document.getElementsByClassName("gallery-slides");
-    if (n > x.length) {slides = 1} 
-    if (n < 1) {slides = x.length};
+    if (n > x.length) {slideIndex = 1} 
+    if (n < 1) {slideIndex = x.length} ;
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none"; 
     }
-    slides++;
-    if (slides > x.length) {slides = 1} 
-    x[slides-1].style.display = "block"; 
-    setTimeout(slideShow, 2000); 
+    x[slideIndex-1].style.display = "block"; 
 }
 </script>
 <div class="gallery-container">

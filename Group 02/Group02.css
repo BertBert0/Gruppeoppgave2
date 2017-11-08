@@ -991,5 +991,28 @@ margin-top:90px;
     left: 470px;
 }
 
+/* Gallery buttons */
+
+.button-right {
+	display: inline;
+	position: absolute;
+	bottom: 100px;
+	right: 0px;
+	width: 10%;
+	height: 400px;
+	background-color: #555555; /* Black */
+	border-radius: 8px;
+}
+
+.button-left {
+	display: inline;
+	position: absolute;
+	bottom: 100px;
+	left: 0px;
+	width: 10%;
+	height: 400px;
+	background-color: #555555; /* Black */
+	border-radius: 8px;
+}
 
 }
