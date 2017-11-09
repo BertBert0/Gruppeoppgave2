@@ -1,11 +1,13 @@
 #kart {
-	width: 120vw;
+	width: 31vw;
 	height: 30vw;
 	display: inline-block;
-	margin-left:5%;
+	margin-left:8%;
     border: 1px solid #000000;
-    max-width:350px;
+    max-width:100%;
     max-height:350px;
+
+}
 
 }
 
