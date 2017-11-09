@@ -97,7 +97,7 @@ function showPosition(position) {
     var latlon = new google.maps.LatLng(lat, lon)
     var mapholder = document.getElementById('kart')
 
-    var vi = new google.maps.LatLng(59.40705, 9.06832)
+    var vi = new google.maps.LatLng(59.393873, 9.100546)
     var myOptions = {
     center:latlon,zoom:12,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
@@ -107,8 +107,8 @@ function showPosition(position) {
 
 
     var map = new google.maps.Map(document.getElementById("kart"), myOptions);
-    var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
-    var markerLlama = new google.maps.Marker({position:vi,map:map,title:"Here we are!.. Bitches!"});
+    var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here"});
+    var markerLlama = new google.maps.Marker({position:vi,map:map,title:"The Llama-Barn"});
 
 }
 
