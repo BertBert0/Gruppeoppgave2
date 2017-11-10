@@ -4,17 +4,11 @@
 	display: inline-block;
 	margin-left:8%;
     border: 1px solid #000000;
-    max-width:100%;
+    max-width:440px;
     max-height:350px;
 
 }
 
-}
-
-
-#kart div {
-
-      }
 
 
 /*
@@ -78,7 +72,7 @@ header {
 }
 
 /* Setter alle elementer i header ved siden av hverandre */
-.llamanav, .llamainc, .menu, nav {
+.llamanav, header h2, .menu, nav {
 	display: inline-block;
 	margin-left: 10px;
 }
@@ -142,7 +136,7 @@ float: 	right;
 	background-color: #FFF8DD;
 }
 
-/* Lager og formaterer en ny box inni den første boxen, så du kan boxe når du boxer, kan brukes til dels som mal. */
+
 .box2 {
 	background-color: #fcf1c6;
 }
@@ -296,6 +290,71 @@ iframe {
 	width: 100%; 
 	height: 50%;
 }
+
+
+/*Contact us mobile/tablet*/
+
+.contactbox1, .contactbox2, .locdiv {
+	padding-top: 15px;
+	padding-bottom: 5px;
+}
+
+.contactbox1, .locdiv {
+	background-color: #FFF8DD;
+}
+
+
+.contactbox2 {
+	background-color: #fcf1c6;
+}
+
+.locations {
+    min-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-family: 'Oswald', sans-serif;
+   
+}
+.locations, .locations tr, .locations th, .locations td {
+	border: solid black 1px;
+	border-collapse: collapse;
+}
+
+.locations caption {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.locations tr:nth-child(odd)  {
+	background-color: #fcf1c6;
+}
+
+.locations th {
+	text-align: center;
+	background-color: #d1ac67;
+}
+
+.locations td:nth-child(3) {
+	background-color: #BE3A3A;
+}
+
+.locations tr:nth-child(2) td:nth-child(3) {
+	background-color: #7BBE3A;
+}
+
+.contactbox2 img{
+	max-width: 40%
+}
+
+.address {
+	font-weight: initial;
+    float: right;
+    border: solid;
+    padding: 10px;
+    font-family: 'Oswald', sans-serif;
+}
+
 }
 
 /* Nav-bar */
@@ -386,97 +445,10 @@ iframe {
 	font-weight: bold;
 	text-decoration: overline underline;
 }
-
-.llamanav, .llamainc{
-}
-
-	}
-
-
-
-
-
-
-
-
 }
 
 
-/* 					**
-** Kode for galleri **
-**					*/
 
-.gallery-container{
-	background-color: #fff8dd;
-
-}
-
-
-/* Midtstiller table innenfor content-boxen */
-.gallery {
-	margin: auto;
-}
-
-/* Legger til en liten border på siden av bildene */
-.gallery td + td { 
-	border-left:2px solid #9C0707; 
-}
-
-/* Legger til en liten border under bildene */
-.gallery td { 
-	border-bottom:2px solid #9C0707; 
-}
-
-/* Fjerner bottom border fra den siste raden */
-.gallery tr:last-child td {
-	border-bottom: none;
-}
-
-/* formaterer og posisjonerer bildene i galleriet */
-.galleryimg {
-	height: auto;
-    width: 360px;
-    margin: 0.2rem;
-
-}
-
-/* Fjerner link outline fra bildene og teksten i lightbox, setter også fargen på credit teksten i lightbox */
-.lightboxcontainer a {
-	text-decoration: none;
-	color: #fff8dd;
-}
-
-.lightbox {
-	/* gjør slik at alle "lightbox" bildene er gjemt, setter posisjonen til å alltid være midt på skjermen, setter størrelsen på bildene, setter bildet og teksten til å være midtstilt,
-	gjør bakgrunnen nesten helt svart, og gjør det slik at lightbox bildet alltid er på toppen */
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	text-align: center;
-	background: rgba(0,0,0,0.98);
-	z-index: 999;
-}
-
-.lightbox img {
-	/* setter lightbox bildet litt lenger ned på siden */
-	margin-top: 150px;
-	max-width: 100%;
-	max-height: 70%;
-}
-
-.lightbox:target {
-	/*fjerner blå link rundt lightbox og viser lightbox bildet når den blir trykt på  */
-	outline: none;
-	display: block;
-}
-
-iframe {
-	width: 100%; 
-	height: 50%;
-}
 
 
 
@@ -927,7 +899,7 @@ margin-top:90px;
 
 }
 .contactbox2 .content-text {
-	top: -85px;
+	top: -50px;
 }
 
 .address {
