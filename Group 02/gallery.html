@@ -153,28 +153,31 @@
 			<p>Credit: issa twaimz @ youtube.com</p>
 		</div>
 	</div>
-
-	<button class="button-left"  onclick="plusDivs(-1)">&#10094;</button>
-	<button class="button-right" onclick="plusDivs(+1)">&#10095;</button>
+	<!-- Adding two buttons to go back and forth between the images -->
+	<button class="button-left"  onclick="changeDivs(-1)">&#10094;</button>
+	<button class="button-right" onclick="changeDivs(+1)">&#10095;</button>
+	<!-- changeDivs substracts one or adds one to the slideRegistry -->
 
 </div>
 <script type="text/javascript">
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
+// Setting slideRegistry to 1. (Slider will start with the first picture)
+var slideRegistry = 1;
+// Calling presentDivs to show the first image.
+presentDivs(slideRegistry);
+// Calling changeDivs() when the user clicks either of the buttons
+function changeDivs(n) {
+    presentDivs(slideRegistry += n);
 }
-
-function showDivs(n) {
+/* The presentDivs function hides (display="none") all elements with the class name "gallery-slides", and displays ("display-block") the element with the given slideRegistry. If the slideRegistry is higher than the number of elements (x.length), the slideRegistry will be set to zero. If the slideRegistry is less than 1 it'll be set to number of elements (x.length) */
+function presentDivs(n) {
     var i;
     var x = document.getElementsByClassName("gallery-slides");
-    if (n > x.length) {slideIndex = 1} 
-    if (n < 1) {slideIndex = x.length} ;
+    if (n > x.length) {slideRegistry = 1} 
+    if (n < 1) {slideRegistry = x.length} ;
     for (i = 0; i < x.length; i++) {
         x[i].style.display = "none"; 
     }
-    x[slideIndex-1].style.display = "block"; 
+    x[slideRegistry-1].style.display = "block"; 
 }
 </script>
 <div class="gallery-container">
