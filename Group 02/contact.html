@@ -87,7 +87,7 @@
 
 <script>
 function getLocation() {
-        navigator.geolocation.getCurrentPosition(showPosition);
+        navigator.geolocation.getCurrentPosition(showPosition); //Attempts to get the users position
     }
     
 
@@ -97,7 +97,7 @@ function showPosition(position) {
     var latlon = new google.maps.LatLng(lat, lon)
     var mapholder = document.getElementById('kart')
 
-    var vi = new google.maps.LatLng(59.393873, 9.100546)
+    var vi = new google.maps.LatLng(59.393873, 9.100546) //Loads google maps and places a marker on the Llama-barn location
     var myOptions = {
     center:latlon,zoom:12,
     mapTypeId:google.maps.MapTypeId.ROADMAP,
